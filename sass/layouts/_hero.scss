@@ -1,0 +1,83 @@
+.hero {
+  background-color: var(--button-bgc);
+  padding-bottom: 94px;
+  padding-top: 94px;
+
+  &__title {
+    @include font(700, 36px, 1.17, 0.03em);
+
+    color: var(--title-text-color);
+
+    text-align: center;
+
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__name {
+    @include font(500, 16px, 1.19, 0.03em);
+
+    color: var(--title-text-color);
+
+    text-align: center;
+
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include font(none, 16px, 1.19, 0.03em);
+
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: var(--white-text-color);
+  }
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-top: 16px;
+
+  &__icon-bg {
+    transition: fill var(--transition-duration)
+      var(--transition-timing-function);
+    transition: background var(--transition-duration)
+      var(--transition-timing-function);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+
+    fill: var(--icon-color);
+    background: rgba(255, 255, 255, 0.1);
+
+    &:hover,
+    &:focus {
+      background: var(--accent-color);
+      fill: var(--white-text-color);
+    }
+  }
+}

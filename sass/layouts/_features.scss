@@ -1,0 +1,41 @@
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    @include font(none, 14px, 1.71, 0.03em);
+  }
+
+  &__item {
+    width: 270px;
+  }
+
+  &__name {
+    @include font(700, 14px, 1.12, 0.03em);
+
+    margin-bottom: 10px;
+
+    color: var(--title-text-color);
+
+    text-transform: uppercase;
+  }
+
+  &__icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 120px;
+    width: 270px;
+
+    margin-bottom: 30px;
+
+    background: var(--button-bgc);
+    border-radius: 4px;
+  }
+}

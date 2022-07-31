@@ -1,0 +1,143 @@
+.footer {
+  display: block;
+  background-color: var(--background-color);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__container {
+    display: flex;
+  }
+}
+
+.address__list {
+  @include font(none, 14px, 1.71, 0.03em);
+
+  font-style: normal;
+
+  margin-top: 20px;
+}
+
+.address__gps {
+  @include transition(color);
+  color: var(--white-text-color);
+}
+
+.address__link {
+  @include transition(color);
+
+  color: var(--adrress-link-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.join {
+  margin-left: 70px;
+  margin-top: 12px;
+
+  &__title {
+    @include font(700, 14px, 1.14, 0.03em);
+
+    text-transform: uppercase;
+
+    color: var(--white-text-color);
+  }
+
+  &__list {
+    display: flex;
+
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  & .social-list__icon {
+    fill: var(--white-text-color);
+  }
+}
+
+.subscribe {
+  display: flex;
+  position: relative;
+
+  margin-left: 93px;
+  margin-top: 12px;
+
+  width: 570px;
+  height: 86px;
+
+  & label {
+    @include font(700, 14px, 1.14, 0.03em);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    text-transform: uppercase;
+
+    color: var(--white-text-color);
+  }
+
+  &__email {
+    @include font(none, 16px, 1.25, 0.03em);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 358px;
+    height: 50px;
+
+    padding-left: 16px;
+
+    display: flex;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+
+    &::placeholder {
+      @include font(none, 16px, 1.25, 0.03em);
+
+      display: flex;
+      align-items: center;
+
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__button {
+    @include font(700, 16px, 1.88, 0.06em);
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    color: var(--white-text-color);
+    background-color: var(--accent-color);
+
+    min-width: 200px;
+    height: 50px;
+
+    padding: 10px 28px;
+
+    border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+}
+
+.tg-svg {
+  fill: var(--white-text-color);
+  margin-left: 10px;
+}

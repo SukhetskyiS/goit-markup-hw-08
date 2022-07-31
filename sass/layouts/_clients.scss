@@ -1,0 +1,46 @@
+.clients {
+  padding-bottom: 94px;
+  padding-top: 94px;
+
+  &__title {
+    @include font(700, 36px, 1.67, 0.03em);
+
+    text-align: center;
+
+    color: var(--title-text-color);
+  }
+
+  &__icon {
+    fill: var(--icon-color);
+
+    @include transition(fill);
+  }
+
+  &__icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+  }
+
+  &__icon-bg:hover,
+  &__icon-bg:hover &__icon,
+  &__icon-bg:focus,
+  &__icon-bg:focus &__icon {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+
+    gap: 30px;
+    margin-top: 50px;
+  }
+}

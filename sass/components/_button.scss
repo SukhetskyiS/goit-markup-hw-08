@@ -1,0 +1,97 @@
+.button {
+  color: var(--title-text-color);
+  background-color: var(--white-text-color);
+
+  font-family: inherit;
+
+  display: inline-block;
+
+  border: transparent;
+
+  &__primary {
+    @include font(700, 16px, 1.88, 0.06em);
+
+    color: var(--white-text-color);
+    background-color: var(--accent-color);
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200;
+  }
+
+  &__secondary {
+    @include font(500, 16px, 1.63, 0.03em);
+
+    transition: color var(--transition-duration)
+        var(--transition-timing-function),
+      background-color var(--transition-duration)
+        var(--transition-timing-function),
+      box-shadow var(--transition-duration) var(--transition-timing-function);
+
+    color: var(--title-text-color);
+    background-color: var(--button-bgc);
+
+    text-align: center;
+
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 6px 22px;
+    min-width: 73px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      color: var(--white-text-color);
+      background-color: var(--accent-color);
+    }
+  }
+}
+
+.backdrop__button {
+  @include transition(fill);
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  right: 8px;
+  top: 8px;
+  background: var(--white-text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.button__submit {
+  @include font(700, 16px, 1.88, 0.06em);
+
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 52px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: var(--white-text-color);
+
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+}

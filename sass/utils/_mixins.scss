@@ -1,0 +1,12 @@
+@mixin font($fh, $fs, $lh, $ls) {
+  font-weight: $fh;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin transition($tp) {
+  transition-property: $tp;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}

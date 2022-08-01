@@ -15,14 +15,12 @@
   @include font(none, 16px, 1.89, 0.03em);
 }
 
-.filter__item + .filter__item {
-  margin-left: 8px;
-}
-
 .filter__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 
+  gap: 8px;
   margin-bottom: 50px;
 }
 
@@ -31,12 +29,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .filter-foto__item {
   @include transition(box-shadow);
 
-  width: 370px;
+  width: 100%;
   cursor: pointer;
 
   &:hover {
@@ -44,9 +43,9 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
-  &:nth-child(n + 4) {
-    margin-top: 30px;
-  }
+  // &:nth-child(n + 4) {
+  //   margin-top: 30px;
+  // }
 }
 
 .filter-foto__thumb {
@@ -83,9 +82,35 @@
 .filter-foto__container {
   padding: 20px 24px;
 
-  width: 370px;
+  width: 100%;
 
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+@media screen and (max-width: 393px) {
+  .filter__item:nth-child(n + 3) {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-foto__item {
+    width: calc((100% - 30px) / 2);
+  }
+  .filter__list {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-foto__item {
+    width: calc((100% - 60px) / 3);
+  }
+
+  .filter__list {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }

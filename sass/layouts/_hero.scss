@@ -1,19 +1,21 @@
 .hero {
   background-color: var(--button-bgc);
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
 
   &__title {
-    @include font(700, 36px, 1.17, 0.03em);
+    @include font(700, 28px, 1.18, 0.03em);
 
     color: var(--title-text-color);
 
     text-align: center;
 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__item {
+    width: 100%;
+
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -32,17 +34,21 @@
   &__text {
     @include font(none, 16px, 1.19, 0.03em);
 
+    margin-bottom: 16px;
+
     text-align: center;
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
   &__container {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
     border-radius: 0px 0px 4px 4px;
 
     background-color: var(--white-text-color);
@@ -50,12 +56,10 @@
 }
 
 .social-list {
+  width: 206px;
   display: flex;
   justify-content: space-between;
-
-  padding-left: 32px;
-  padding-right: 32px;
-  margin-top: 16px;
+  text-align: center;
 
   &__icon-bg {
     transition: fill var(--transition-duration)
@@ -79,5 +83,41 @@
       background: var(--accent-color);
       fill: var(--white-text-color);
     }
+  }
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-color: var(--button-bgc);
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+  .hero__title {
+    @include font(700, 36px, 1.17, 0.03em);
+
+    color: var(--title-text-color);
+
+    text-align: center;
+
+    margin-bottom: 50px;
+  }
+  .hero__item {
+    width: calc((100% - 90px) / 4);
+  }
+
+  .hero__container {
+    padding-bottom: 30px;
   }
 }

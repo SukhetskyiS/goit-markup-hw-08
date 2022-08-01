@@ -21,8 +21,12 @@
     cursor: pointer;
     margin: 0 auto;
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 10px 24px;
     min-width: 200;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 10px 32px;
   }
 
   &__secondary {

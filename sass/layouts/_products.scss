@@ -1,6 +1,6 @@
 .filter {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .filter-foto__title {
@@ -105,6 +105,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .filter {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   .filter-foto__item {
     width: calc((100% - 60px) / 3);
   }

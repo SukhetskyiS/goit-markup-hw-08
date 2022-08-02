@@ -370,18 +370,6 @@ a {
     margin-right: 10px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .site-contact__icon.iphone {
-    width: 10px;
-    height: 16px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .site-contact__icon.imail {
-    width: 16px;
-    height: 12px;
-  }
-}
 .site-contact__link:hover .site-contact__icon, .site-contact__link:focus .site-contact__icon {
   color: var(--accent-color);
   fill: var(--accent-color);

@@ -63,20 +63,6 @@
     margin-right: 10px;
   }
 
-  &.iphone {
-    @media screen and (min-width: 1200px) {
-      width: 10px;
-      height: 16px;
-    }
-  }
-
-  &.imail {
-    @media screen and (min-width: 1200px) {
-      width: 16px;
-      height: 12px;
-    }
-  }
-
   .site-contact__link:hover &,
   .site-contact__link:focus & {
     color: var(--accent-color);

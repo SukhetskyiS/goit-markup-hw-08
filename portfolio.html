@@ -17,52 +17,153 @@
   </head>
 
   <body class="body">
-    <!--Шапка-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a href="./index.html" class="logo">
           <span class="logo--accent">Web</span
           ><span class="logo--primary">Studio</span>
         </a>
-
-        <nav class="site-nav">
-          <ul class="site-nav__list list">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студия</a>
-            </li>
-            <li class="site-nav__item">
+        <div class="navigation">
+          <nav class="site-nav">
+            <ul class="site-nav__list list">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a
+                  href="./portfolio.html"
+                  class="site-nav__link site-nav__link--curent"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="contacts">
+          <ul class="site-contact__list list">
+            <li class="site-contact__item">
               <a
-                href="./portfolio.html"
-                class="site-nav__link site-nav__link--curent"
-                >Портфолио</a
+                href="mailto:info@devstudio.com"
+                class="site-contact__link link"
+              >
+                <svg
+                  class="site-contact__icon imail"
+                  width="14px"
+                  height="10px"
+                >
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
+            <li class="site-contact__item">
+              <a href="tel:+380961111111" class="site-contact__link link">
+                <svg
+                  class="site-contact__icon iphone"
+                  width="10px"
+                  height="14px"
+                >
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
+        </div>
 
-        <ul class="site-contact__list list">
-          <li class="site-contact__item">
-            <a href="mailto:info@devstudio.com" class="site-contact__link link">
-              <svg class="site-contact__icon" width="16px" height="12px">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="site-contact__item">
-            <a href="tel:+380961111111" class="site-contact__link link">
-              <svg class="site-contact__icon" width="10px" height="16px">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <!-- mob open button -->
+        <button type="button" class="menu-button-open">
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-m" href="./images/icons.svg#menu40"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <!-- MOBILE MENU -->
+      <div class="mob-menu is-hidden">
+        <div class="mob-container">
+          <!-- mob close button -->
+          <button type="button" class="menu-button-close">
+            <svg
+              class="mob-menu__svg--close"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-x" href="./images/icons.svg#close40"></use>
+            </svg>
+          </button>
+
+          <!-- mob navigation -->
+          <nav>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a
+                  href="./index.html"
+                  class="mob-menu__link mob-menu__link--curent"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- mob contacts -->
+          <div class="mob-menu__bot">
+            <div class="mob-connect">
+              <ul class="mob-connect__list list">
+                <li class="mob-connect__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="mob-connect__link--phone link"
+                  >
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-connect__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="mob-connect__link--email link"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- LINKS -->
+            <div class="mob-links">
+              <ul class="mob-links__list list">
+                <li class="mob-links__item">
+                  <a href="" class="mob-links__link link">Instagram</a>
+                </li>
+                <li class="mob-links__item">
+                  <a href="" class="mob-links__link link">Twitter</a>
+                </li>
+                <li class="mob-links__item">
+                  <a href="" class="mob-links__link link">Facebook</a>
+                </li>
+                <li class="mob-links__item">
+                  <a href="" class="mob-links__link link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main>
       <!-- Фильтр кнопок -->
@@ -117,7 +218,7 @@
                   <img
                     src="./images/img01.jpg"
                     alt="Экран ноутбука"
-                    width="370"
+                    width="270"
                   />
                 </picture>
                 <div class="filter-foto__overlay">
@@ -153,7 +254,7 @@
                   <img
                     src="./images/img02.jpg"
                     alt="Баскетболисты"
-                    width="370"
+                    width="270"
                   />
                 </picture>
                 <div class="filter-foto__overlay">
@@ -191,7 +292,7 @@
                   <img
                     src="./images/img03.jpg"
                     alt="Лого ресторана"
-                    width="370"
+                    width="270"
                   />
                 </picture>
                 <div class="filter-foto__overlay">
@@ -224,7 +325,7 @@
                     "
                     media="(min-width: 480px)"
                   />
-                  <img src="./images/img04.jpg" alt="Наушники" width="370" />
+                  <img src="./images/img04.jpg" alt="Наушники" width="270" />
                 </picture>
                 <div class="filter-foto__overlay">
                   <p>
@@ -256,7 +357,7 @@
                     "
                     media="(min-width: 480px)"
                   />
-                  <img src="./images/img05.jpg" alt="Две коробки" width="370" />
+                  <img src="./images/img05.jpg" alt="Две коробки" width="270" />
                 </picture>
                 <div class="filter-foto__overlay">
                   <p>
@@ -291,7 +392,7 @@
                   <img
                     src="./images/img06.jpg"
                     alt="Экран монитора"
-                    width="370"
+                    width="270"
                   />
                 </picture>
                 <div class="filter-foto__overlay">
@@ -324,7 +425,7 @@
                     "
                     media="(min-width: 480px)"
                   />
-                  <img src="./images/img07.jpg" alt="Журнал" width="370" />
+                  <img src="./images/img07.jpg" alt="Журнал" width="270" />
                 </picture>
                 <div class="filter-foto__overlay">
                   <p>
@@ -356,7 +457,7 @@
                     "
                     media="(min-width: 480px)"
                   />
-                  <img src="./images/img08.jpg" alt="Бирка" width="370" />
+                  <img src="./images/img08.jpg" alt="Бирка" width="270" />
                 </picture>
                 <div class="filter-foto__overlay">
                   <p>
@@ -388,7 +489,7 @@
                     "
                     media="(min-width: 480px)"
                   />
-                  <img src="./images/img09.jpg" alt="Ноутбук" width="370" />
+                  <img src="./images/img09.jpg" alt="Планшет" width="270" />
                 </picture>
                 <div class="filter-foto__overlay">
                   <p>

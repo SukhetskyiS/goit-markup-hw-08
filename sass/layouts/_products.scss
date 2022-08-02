@@ -102,6 +102,9 @@
   .filter__list {
     justify-content: center;
   }
+  .first {
+    padding-bottom: 56px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -117,5 +120,9 @@
   .filter__list {
     justify-content: center;
     flex-wrap: nowrap;
+  }
+
+  .first {
+    padding-bottom: 20px;
   }
 }

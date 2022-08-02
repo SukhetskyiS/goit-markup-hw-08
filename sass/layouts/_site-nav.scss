@@ -1,10 +1,19 @@
-.site-nav__list {
-  display: flex;
-  margin-left: 93px;
+.navigation {
+  display: none;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
 }
 
-.site-nav__item + .site-nav__item {
-  margin-left: 50px;
+.site-nav__list {
+  display: flex;
+  margin-left: 88px;
+  gap: 50px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 92px;
+  }
 }
 
 .site-nav__link {
@@ -26,7 +35,7 @@
       position: absolute;
       content: '';
 
-      transform: translateY(28px);
+      transform: translateY(34px);
 
       display: block;
 
@@ -35,6 +44,10 @@
 
       background-color: var(--accent-color);
       border-radius: 2px;
+
+      @media screen and (min-width: 1200px) {
+        transform: translateY(28px);
+      }
     }
   }
 }

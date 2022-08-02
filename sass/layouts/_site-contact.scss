@@ -1,20 +1,49 @@
+.contacts {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline;
+    flex-wrap: wrap;
+    margin-left: 90px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
 .site-contact__list {
   display: flex;
   margin-left: auto;
+  gap: 10px;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 30px;
+  }
 }
 
-.site-contact__item + .site-contact__item {
-  margin-left: 50px;
-}
+// .site-contact__item + .site-contact__item {
+//   margin-left: 50px;
+// }
 
 .site-contact__link {
-  @include font(500, 14px, 1.14, 0.02em);
+  @include font(500, 12px, 1.17, 0.02em);
   @include transition(color);
 
   display: flex;
   align-items: center;
 
   color: var(--primary-text-color);
+
+  @media screen and (min-width: 1200px) {
+    @include font(500, 14px, 1.14, 0.02em);
+  }
 
   &:hover,
   &:focus {
@@ -26,9 +55,27 @@
 .site-contact__icon {
   @include transition(fill);
 
-  margin-right: 10px;
+  margin-right: 8px;
 
   fill: var(--icon-color);
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+
+  &.iphone {
+    @media screen and (min-width: 1200px) {
+      width: 10px;
+      height: 16px;
+    }
+  }
+
+  &.imail {
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+    }
+  }
 
   .site-contact__link:hover &,
   .site-contact__link:focus & {

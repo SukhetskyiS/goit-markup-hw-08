@@ -18,51 +18,153 @@
 
   <body class="body">
     <!--Шапка-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a href="./index.html" class="logo">
           <span class="logo--accent">Web</span
           ><span class="logo--primary">Studio</span>
         </a>
-        
-        <nav class="site-nav">
-          <ul class="site-nav__list list">
-            <li class="site-nav__item">
+        <div class="navigation">
+          <nav class="site-nav">
+            <ul class="site-nav__list list">
+              <li class="site-nav__item">
+                <a
+                  href="./index.html"
+                  class="site-nav__link site-nav__link--curent"
+                  >Студия</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="contacts">
+          <ul class="site-contact__list list">
+            <li class="site-contact__item">
               <a
-                href="./index.html"
-                class="site-nav__link site-nav__link--curent"
-                >Студия</a
+                href="mailto:info@devstudio.com"
+                class="site-contact__link link"
+              >
+                <svg
+                  class="site-contact__icon imail"
+                  width="14px"
+                  height="10px"
+                >
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
+            <li class="site-contact__item">
+              <a href="tel:+380961111111" class="site-contact__link link">
+                <svg
+                  class="site-contact__icon iphone"
+                  width="10px"
+                  height="14px"
+                >
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        
-        <ul class="site-contact__list list">
-          <li class="site-contact__item">
-            <a href="mailto:info@devstudio.com" class="site-contact__link link">
-              <svg class="site-contact__icon" width="16px" height="12px">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="site-contact__item">
-            <a href="tel:+380961111111" class="site-contact__link link">
-              <svg class="site-contact__icon" width="10px" height="16px">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
+
+        <!-- mob open button -->
+        <button type="button" class="menu-button-open">
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-m" href="./images/icons.svg#menu40"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <!-- MOBILE MENU -->
+      <div class="mob-menu is-hidden">
+        <div class="mob-container">
+          <!-- mob close button -->
+          <button type="button" class="menu-button-close">
+            <svg
+              class="mob-menu__svg--close"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-x" href="./images/icons.svg#close40"></use>
+            </svg>
+          </button>
+
+          <!-- mob navigation -->
+          <nav>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a
+                  href="./index.html"
+                  class="mob-menu__link mob-menu__link--curent"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- mob contacts -->
+          <div class="mob-menu__bot">
+            <div class="mob-connect">
+              <ul class="mob-connect__list list">
+                <li class="mob-connect__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="mob-connect__link--phone link"
+                  >
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-connect__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="mob-connect__link--email link"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- LINKS -->
+            <div class="mob-links">
+              <ul class="mob-links__list list">
+                <li class="mob-links__item">
+                  <a href="" class="mob-links__link link">Instagram</a>
+                </li>
+                <li class="mob-links__item">
+                  <a href="" class="mob-links__link link">Twitter</a>
+                </li>
+                <li class="mob-links__item">
+                  <a href="" class="mob-links__link link">Facebook</a>
+                </li>
+                <li class="mob-links__item">
+                  <a href="" class="mob-links__link link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!--Основная часть страницы-->
     <main>
@@ -141,28 +243,44 @@
           <h2 class="jobs__title">Чем мы занимаемся</h2>
           <ul class="jobs__list">
             <li class="jobs__item">
-              <img
-                src="./images/box1.jpg"
-                alt="Рабочее место программиста: монитор, планшет, клавиатура. Набирает код"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
+                />
+                <img
+                  src="./images/box1.jpg"
+                  alt="Рабочее место программиста: монитор, планшет, клавиатура. Набирает код"
+                  width="370"
+                />
+              </picture>
+
               <p class="jobs__text">Десктопные приложения</p>
             </li>
 
             <li class="jobs__item">
-              <img
-                src="./images/box2.jpg"
-                alt="Человек сидит за ноутбуком и держит телефон в руке"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                />
+                <img
+                  src="./images/box2.jpg"
+                  alt="Рабочее место программиста: монитор, планшет, клавиатура. Набирает код"
+                  width="370"
+                />
+              </picture>
               <p class="jobs__text">Мобильные приложения</p>
             </li>
             <li class="jobs__item">
-              <img
-                src="./images/box3.jpg"
-                alt="Человек держит планшет в руке на котором изображена палитра цветов"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                />
+                <img
+                  src="./images/box3.jpg"
+                  alt="Рабочее место программиста: монитор, планшет, клавиатура. Набирает код"
+                  width="370"
+                />
+              </picture>
               <p class="jobs__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -175,11 +293,22 @@
           <h2 class="hero__title">Наша команда</h2>
           <ul class="hero__list list">
             <li class="hero__item">
-              <img
-                src="./images/img1.jpg"
-                alt="Парень в коричневой рубашке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  srcset="./images/img1-tab.jpg 1x, ./images/img1-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  srcset="./images/img1-mob.jpg 1x, ./images/img1-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/img1.jpg"
+                  alt="Парень в коричневой рубашке"
+                  width="270"
+                />
+              </picture>
+
               <div class="hero__container">
                 <h3 class="hero__name">Игорь Демьяненко</h3>
                 <p class="hero__text">Product Designer</p>
@@ -235,11 +364,21 @@
             </li>
 
             <li class="hero__item">
-              <img
-                src="./images/img2.jpg"
-                alt="Девушка в черном пиджаке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  srcset="./images/img2-tab.jpg 1x, ./images/img2-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  srcset="./images/img2-mob.jpg 1x, ./images/img2-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/img2.jpg"
+                  alt="Парень в коричневой рубашке"
+                  width="270"
+                />
+              </picture>
               <div class="hero__container">
                 <h3 class="hero__name">Ольга Репина</h3>
                 <p class="hero__text">Frontend Developer</p>
@@ -295,11 +434,21 @@
             </li>
 
             <li class="hero__item">
-              <img
-                src="./images/img3.jpg"
-                alt="Парень в белой рубашке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/img3.jpg 1x, ./images/img3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  srcset="./images/img3-tab.jpg 1x, ./images/img3-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  srcset="./images/img3-mob.jpg 1x, ./images/img3-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/img3.jpg"
+                  alt="Парень в коричневой рубашке"
+                  width="270"
+                />
+              </picture>
               <div class="hero__container">
                 <h3 class="hero__name">Николай Тарасов</h3>
                 <p class="hero__text">Marketing</p>
@@ -355,11 +504,21 @@
             </li>
 
             <li class="hero__item">
-              <img
-                src="./images/img4.jpg"
-                alt="Парень в черной футболке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/img4.jpg 1x, ./images/img4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  srcset="./images/img4-tab.jpg 1x, ./images/img4-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  srcset="./images/img4-mob.jpg 1x, ./images/img4-mob-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/img4.jpg"
+                  alt="Парень в коричневой рубашке"
+                  width="270"
+                />
+              </picture>
               <div class="hero__container">
                 <h3 class="hero__name">Михаил Ермаков</h3>
                 <p class="hero__text">UI Designer</p>
@@ -638,5 +797,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

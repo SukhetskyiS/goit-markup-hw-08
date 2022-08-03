@@ -52,9 +52,7 @@
   .features__item {
     width: calc((100% - 30px) / 2);
   }
-  .features__item:nth-child(-n + 2) {
-    margin-bottom: 27px;
-  }
+
   .features__name {
     text-align: left;
   }
